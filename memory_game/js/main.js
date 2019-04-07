@@ -1,7 +1,28 @@
 
 
 
-var cards = [ "queen", "queen", "king", "king"];
+var cards = [ 
+{
+rank: "queen",
+suit: "hearts",
+cardImage: "images/queen-of-hearts.png"
+},
+{
+rank: "queen",
+suit: "diamonds",
+cardImage: "images/queen-of-diamons.png"
+},
+{
+rank: "king",
+suit: "hearts",
+cardImage: "images/king-of-hearts.png"
+},
+{
+rank: "king",
+suit: "diamonds",
+cardImage: " images/king-of-diamonds.png"
+}
+];
 
 var cardsinplay = [];
 
@@ -15,10 +36,14 @@ if (cardsinplay[0] === cardsinplay[3] ) {
 }
 
 var cardflip = function(cardid){
-console.log("user flipped" + cards[cardid]);
-cardsinplay.push(cards[cardid]);
+console.log("user flipped" + cards[cardid].rank);
+cardsinplay.push(cards[cardid].rank);
+console.log(cards[cardid].cardImage);
+console.log(cards[cardid].suit);
 checkformatch();
 }  
+
+
 
 cardflip(0);
 
